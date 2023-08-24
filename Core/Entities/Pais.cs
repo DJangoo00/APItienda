@@ -2,13 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
-namespace Core.Entities
+namespace Core.Entities;
+public class Pais : BaseEntity
 {
-    public class Pais
-    {
-        public int Id { get; set;}
-        public string NombrePais { get; set;}
-        
-    }
+    public string NombrePais { get; set; }
+    public ICollection<Estado> Estados { get; set; }
 }
