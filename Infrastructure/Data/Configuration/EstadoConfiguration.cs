@@ -14,17 +14,17 @@ namespace Infrastructure.Data.Configuration
             // utilizando el objeto 'builder'.
             builder.ToTable("Estado");
 
-            builder.Property(p => p.codEstado)
+            builder.Property(p => p.Id)
             .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
             .HasMaxLength(3);
             
-            builder.Property(p => p.nombreEstado)
+            builder.Property(p => p.NombreEstado)
             .IsRequired()
             .HasMaxLength(50);
 
             builder.HasOne(p => p.Pais)
             .WithMany(p => p.Estados)
-            .HasForeignKey(p => p.codPais);
+            .HasForeignKey(p => p.Id);
         }
     }
 }

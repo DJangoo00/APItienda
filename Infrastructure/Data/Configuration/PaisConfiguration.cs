@@ -1,6 +1,5 @@
 
 using Core.Entities;
-using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -15,14 +14,13 @@ namespace Infrastructure.Data.Configuration
             // utilizando el objeto 'builder'.
             builder.ToTable("Pais");
 
-            builder.Property(p => p.codPais)
-            .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+            builder.Property(p => p.Id)
+            .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
             .HasMaxLength(3);
 
-            builder.Property(p => p.nombrePais)
+            builder.Property(p => p.NombrePais)
             .IsRequired()
             .HasMaxLength(50);
-
         }
     }
 }
