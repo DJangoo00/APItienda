@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -19,4 +20,12 @@ public class APItiendaContext : DbContext
     public DbSet<ProductoPersona> ProductosPersonas { get; set; }
     public DbSet<Region> Regiones { get; set; }
     public DbSet<TipoPersona> TipoPersonas { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Persona>().HasIndex(idx => idx.IdPersona).IsUnique();
+        modelBuilder.Entity<ProductoPersona>().HasKey(r => new {r.IdPersona, r.IdProducto});
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    }
 }
