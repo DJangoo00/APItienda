@@ -1,13 +1,13 @@
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using API.Extensions;
-
-var builder = WebApplication.CreateBuilder(args);
-//builder.Services.AddAplicacionServices();
+using System.Reflection;
 
 // Add services to the container.
-
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 builder.Services.AddControllers();
+//builder.Services.AddAplicacionServices();
 builder.Services.AddDbContext<APItiendaContext>(optionBuilder =>
 {
     string ? connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

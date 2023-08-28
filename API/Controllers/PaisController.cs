@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 namespace API.Controllers
 {
     [Route("[controller]")]
-    public class PaisController : Controller
+    public class PaisController : BaseApiController
     {
         private readonly ILogger<PaisController> _logger;
 

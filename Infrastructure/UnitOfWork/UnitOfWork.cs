@@ -21,4 +21,12 @@ namespace Infrastructure.UnitOfWork
     {}
     public ITipoPersona TipoPersonas
     {}
+    public void Dispose()
+    {
+        context.Dispose();
+    }
+    public async Task<int> SaveAsync()
+    {
+        return await context.SaveChangesAsync();
+    }
 }
