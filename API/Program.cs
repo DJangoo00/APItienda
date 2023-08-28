@@ -1,6 +1,9 @@
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using API.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
+//builder.Services.AddAplicacionServices();
 
 // Add services to the container.
 
@@ -22,6 +25,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 

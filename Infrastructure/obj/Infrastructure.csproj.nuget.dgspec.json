@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\APItienda\\Infrastructure\\Infrastructure.csproj": {}
+    "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\APItienda\\Core\\Core.csproj": {
+    "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\APItienda\\Core\\Core.csproj",
+        "projectUniqueName": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\APItienda\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\dalgr\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\APItienda\\Core\\obj\\",
+        "projectPath": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dalgr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -57,17 +57,17 @@
         }
       }
     },
-    "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\APItienda\\Infrastructure\\Infrastructure.csproj": {
+    "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\APItienda\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\APItienda\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\dalgr\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\APItienda\\Infrastructure\\obj\\",
+        "projectPath": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dalgr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -79,8 +79,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\APItienda\\Core\\Core.csproj": {
-                "projectPath": "D:\\Users\\dalgr\\Documents\\Campus\\Ciclo3\\NetCore\\APItienda\\Core\\Core.csproj"
+              "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Core\\Core.csproj": {
+                "projectPath": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Core\\Core.csproj"
               }
             }
           }
