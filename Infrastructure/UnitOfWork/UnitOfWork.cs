@@ -7,7 +7,7 @@ using Core.Interface;
 
 namespace Infrastructure.UnitOfWork
 {
-    public class UnitOfWork
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
         
     }

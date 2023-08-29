@@ -4,12 +4,13 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Core.Interface;
+using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace API.Controllers;
 
-public class RegionController : BaseApiController
+public class : BaseApiController
 {
     private readonly IUnitofWork unitofWork;
     public RegionController(IUnitofWork unitofWork)
