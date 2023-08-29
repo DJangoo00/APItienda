@@ -8,7 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 builder.Services.ConfigureCors();
 builder.Services.AddControllers();
+//builder.Services.ConfigureApiVersioning();
+//builder.Services.ConfigureRatelimiting();
 //builder.Services.AddAplicacionServices();
+
 builder.Services.AddDbContext<APItiendaContext>(optionBuilder =>
 {
     string ? connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

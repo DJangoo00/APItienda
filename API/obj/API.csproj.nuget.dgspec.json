@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\API\\API.csproj": {}
+    "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\API\\API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\API\\API.csproj": {
+    "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\API\\API.csproj",
+        "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\API\\API.csproj",
         "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\API\\obj\\",
+        "outputPath": "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -141,14 +141,14 @@
         }
       }
     },
-    "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\APT01-38\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\APT01-38\\AppData\\Roaming\\NuGet\\NuGet.Config"

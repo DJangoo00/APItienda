@@ -87,3 +87,6 @@ D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\APItienda\API\obj\Debug\net7.0\sc
 D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\APItienda\API\obj\Debug\net7.0\API.csproj.CopyComplete
 D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\APItienda\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 D:\Users\dalgr\Documents\Campus\Ciclo3\NetCore\APItienda\API\obj\Debug\net7.0\ref\API.dll
+C:\Users\APT01-38\Desktop\DG\APItienda\API\obj\Debug\net7.0\API.dll
+C:\Users\APT01-38\Desktop\DG\APItienda\API\obj\Debug\net7.0\refint\API.dll
+C:\Users\APT01-38\Desktop\DG\APItienda\API\obj\Debug\net7.0\API.pdb

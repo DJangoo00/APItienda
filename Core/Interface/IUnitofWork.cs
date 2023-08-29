@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Core.Interface
 {
-    public interface IUnitofWork
+    public interface IUnitOfWork
     {
         //
         IPaisInterface Paises { get; }
