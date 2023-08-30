@@ -28,6 +28,6 @@ public class PaisRepository : GenericRepository<Pais>, IPaisInterface
     {
         return await _context.Paises
             .Include(p => p.Estados)
-            .FirstOrDefaultAsync(p =>  p.Id == id);
+            .FirstOrDefaultAsync(p => p.Id == id);
     }
 }

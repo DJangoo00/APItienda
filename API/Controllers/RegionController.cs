@@ -11,7 +11,7 @@ using Infrastructure.UnitOfWork;
 namespace API.Controllers;
 public class RegionController : BaseApiController
 {
-    private readonly IUnitOfWork unitOfWork;
+    /*private readonly IUnitOfWork unitOfWork;
     private readonly IMapper mapper;
 
     public RegionController(IUnitOfWork unitOfWork, IMapper mapper)
@@ -83,5 +83,7 @@ public class RegionController : BaseApiController
         unitOfWork.Regiones.Remove(regiones);
         await unitOfWork.SaveAsync();
         return NoContent();
+        
     }
+    */
 }

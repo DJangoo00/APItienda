@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 using Core.Entities;
 using Core.Interface;
 using Infrastructure.Data;
@@ -10,11 +11,12 @@ using Infrastructure.Repository;
 
 namespace Infrastructure.UnitOfWork
 {
+    //IDisposable es una interfaz de .NET
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
         private readonly APItiendaContext context;
         private PaisRepository _paises;
-        private EstadoRepository _estados;
+        private RegionRepository _regiones;
         public UnitOfWork(APItiendaContext _context)
         {
             _context = _context;
@@ -30,7 +32,8 @@ namespace Infrastructure.UnitOfWork
                 return _paises;
             }
         }
-        public IRegion Regiones
+        /*
+        public IEstado Estados
         {
             get
             {
@@ -41,6 +44,21 @@ namespace Infrastructure.UnitOfWork
                 return _estados;
             }
         }
+        */
+        
+        /*public IRegion Regiones
+        {
+            get
+            {
+                if (_regiones == null)
+                {
+                    _regiones = new RegionRepository(context);
+                }
+                return _regiones;
+            }
+        }
+        */
+        
         public void Dispose()
         {
             context.Dispose();
