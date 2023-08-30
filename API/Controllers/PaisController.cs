@@ -1,8 +1,12 @@
-using Core.Interface;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.HttpResults;
+
+using Core.Interface;
 using Core.Entities;
 using API.Dtos;
-using AutoMapper;
+using API.Controllers;
+using Infrastructure.UnitOfWork;
 
 namespace API.Controllers;
 public class PaisController : BaseApiController

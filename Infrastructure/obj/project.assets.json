@@ -710,8 +710,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Core\\Core.csproj": {
-              "projectPath": "c:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Core\\Core.csproj"
+            "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\APT01-38\\Desktop\\DG\\APItienda\\Core\\Core.csproj"
             }
           }
         }

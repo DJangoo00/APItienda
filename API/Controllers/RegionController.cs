@@ -1,42 +1,87 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Core.Interface;
-using Infrastructure.Data;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http.HttpResults;
+
+using Core.Interface;
+using Core.Entities;
+using API.Dtos;
+using API.Controllers;
+using Infrastructure.UnitOfWork;
 
 namespace API.Controllers;
-
-public class : BaseApiController
+public class RegionController : BaseApiController
 {
-    private readonly IUnitofWork unitofWork;
-    public RegionController(IUnitofWork unitofWork)
+    private readonly IUnitOfWork unitOfWork;
+    private readonly IMapper mapper;
+
+    public RegionController(IUnitOfWork unitOfWork, IMapper mapper)
     {
-        this.unitofWork = unitofWork;
+        this.unitOfWork = unitOfWork;
+        this.mapper = mapper;
     }
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-    public async Task<ActionResult<IEnumerable<Region>>> GetRegions()
+    public async Task<ActionResult<IEnumerable<RegionDto>>> Get()
     {
-        var regions = await unitofWork.Regiones.GetByIdAsync();
-        return Ok(regions);
+        var regiones = await unitOfWork.Regiones.GetAllAsync();
+        return Ok(regiones);
     }
-    [HttpPost]
+
+    [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<Region>> Post(Region region)
+
+    public async Task<ActionResult> Get(int id)
     {
-        this.unitofWork.Regiones.Add(region);
-        await this.unitofWork.SaveAsync();
+        var region = await unitOfWork.Regiones.GetByIdAsync(id);
+        return Ok(region);
+    }
+
+    [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+    public async Task<ActionResult<Region>> Post(RegionDto regionDto)
+    {
+        var region = this.mapper.Map<Pais>(regionDto);
+        this.unitOfWork.Paises.Add(region);
+        await unitOfWork.SaveAsync();
         if (region == null)
         {
             return BadRequest();
         }
-        return CreatedAtActionResult(nameof(Post), new {id = region.IdCod}, region);
+        regionDto.Id = region.Id;
+        return CreatedAtAction(nameof(Post), new { id = regionDto.Id }, regionDto);
+    }
+
+    [HttpPut("{id}")]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<RegionDto>> Put(int id, [FromBody]RegionDto regionDto)
+    {
+        if(regionDto == null)
+            return NotFound();
+        var region = this.mapper.Map<Pais>(regionDto);
+        unitOfWork.Paises.Update(region);
+        await unitOfWork.SaveAsync();
+        return regionDto;
+    }
+
+    [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var regiones = await unitOfWork.Regiones.GetByIdAsync(id);
+        if (regiones == null)
+        {
+            return NotFound();
+        }
+        unitOfWork.Regiones.Remove(regiones);
+        await unitOfWork.SaveAsync();
+        return NoContent();
     }
 }

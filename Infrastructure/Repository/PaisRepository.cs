@@ -12,38 +12,22 @@ namespace Infrastructure.Repository;
 
 
 public class PaisRepository : GenericRepository<Pais>, IPaisInterface
+{
+    private readonly APItiendaContext _context;
+    public PaisRepository(APItiendaContext context) : base(context)
     {
-    private readonly APItiendaContext = context;
+        _context = context;
     }
-
-/*
-    public class CountryRepository : GenericRepository<Country>, ICountry
+    public override async Task<IEnumerable<Pais>> GetAllAsync()
     {
-        private readonly StoreContext _context;
-
-        public CountryRepository(StoreContext context) : base(context)
-        {
-            this._context = context;
-        }
-
-    public Task ToListAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-    public override async Task<IEnumerable<Country>> GetAllAsync()
-    {
-        return await _context.Countries
-            .Include(p => p.States)
+        return await _context.Paises
+            .Include(p => p.Estados)
             .ToListAsync();
     }
-
-    public override async Task<Country> GetByIdAsync(int id)
+    public override async Task<Pais> GetByIdAsync(int id)
     {
-        return await _context.Countries
-            .Include(p => p.States)
-            .FirstOrDefaultAsync(p => p.Id == id);
+        return await _context.Paises
+            .Include(p => p.Estados)
+            .FirstOrDefaultAsync(p =>  p.Id == id);
     }
-    }
-
-*/
+}

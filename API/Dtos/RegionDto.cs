@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace API.Dtos
 {
-    public class EstadoDto
+    public class RegionDto
     {
         public int Id { get; set; }
-        public string NombreEstado { get; set; }
+        public string NombrePais { get; set; }
     }
 }

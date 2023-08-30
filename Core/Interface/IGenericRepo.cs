@@ -1,5 +1,6 @@
 using System.Linq.Expressions;
 using Core.Entities;
+using Microsoft.VisualBasic;
 
 namespace Core.Interface;
 
@@ -14,5 +15,15 @@ public interface IGenericRepo<T> where T : BaseEntity
     void Remove (T entity);
     void RemoveRanger (IEnumerable<T> entities);
     void Update (T entity);
-    
+    /*
+    public virtual async Task<(int totalRecord, IEnumerable<T> records)> GetAllAsync(int pageIndex, int pageSize);
+    {
+        var totalRecord = await _context.Set<T>().CountAsync();
+        VariantType records = await _context.Set<T>()
+        .Skip((pageIndex - 1) * pageSize)
+        .Take(pageSize)
+        .ToListAsync();
+        return (totalRecord, records);
+    }
+    */
 }
